@@ -1,0 +1,50 @@
+.main__container {
+  min-height: 90vh;
+  width: 90vw;
+  display: flex;
+  justify-items: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.signup-card {
+  position: relative;
+  display: flex;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  width: 85%;
+  min-height: 80vh;
+  -webkit-animation: fadein 1s ease-in-out;
+  -moz-animation: fadein 1s ease-in-out;
+  -ms-animation: fadein 1s ease-in-out;
+  animation: fadein 1s ease-in-out;
+}
+
+.signup-header {
+  position: absolute;
+  top: 5rem;
+  font-size: 2.5rem;
+  color: #0c1066;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+  -webkit-animation: slidedown 1.5s ease-in-out;
+  -moz-animation: slidedown 1.5s ease-in-out;
+  -ms-animation: slidedown 1.5s ease-in-out;
+  animation: slidedown 1.5s ease-in-out;
+}
+
+.signup-content {
+  flex: 2 2;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  -webkit-animation: slidedown 1.5s ease-in-out;
+  -moz-animation: slidedown 1.5s ease-in-out;
+  -ms-animation: slidedown 1.5s ease-in-out;
+  animation: slidedown 1.5s ease-in-out;
+  min-height: 100%;
+}
+
+/*# sourceMappingURL=signup.component.css.map */

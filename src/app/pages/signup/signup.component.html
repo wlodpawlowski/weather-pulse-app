@@ -1,0 +1,23 @@
+<div class="main__container">
+    <div class="signup-card">
+        <main class="signup-content">
+            <span class="signup-header">Signup</span>
+            <form class="signup-form" (ngSubmit)="signup($event)" #authform="ngForm">
+                <input class="signup-input" ngModel type="email" placeholder="Email" name="email" required>
+                <input class="signup-input" ngModel type="password" placeholder="Password" name="password" minlength="6" required>
+                <input type="submit" name="submit" value="Signup" class="signup-btn" [class.btn-disabled]="!authForm.form.valid" [disabled]="!authForm.form.valie">
+            </form>
+            <div class="login-link-wrapper">
+                <span class="login-notice">Alreade have an account ?</span>
+                <a class="login-link" routerLink="/login">login</a>
+            </div>
+        </main>
+        <aside class="signup-aside">
+            <div class="signup-aside-overlay"></div>
+            <h1 class="signup-welcome-text">Join Weather Pulse Today!</h1>
+            <hr class="signup-aside-hr">
+        </aside>
+    </div>
+</div>
+
+<div class="error-container">{{ errorMessage }}</div>
