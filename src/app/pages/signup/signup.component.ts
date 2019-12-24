@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { FbService } from '../../services/fb/fb.service';
 import { Router } from '@angular/router';
 import { first } from 'rxjs/operators';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-signup',
@@ -18,7 +19,7 @@ export class SignupComponent implements OnInit {
 
   }
 
-  public signup(e: any): void {
+  public signup(e: any): any {
     this.fb.signup(e.target.email.value, e.target.password.value).pipe(first()).subscribe(() => {
       this.router.navigateByUrl('');
     }, (err) => {
