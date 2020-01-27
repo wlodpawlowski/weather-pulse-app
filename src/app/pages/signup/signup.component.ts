@@ -20,6 +20,8 @@ export class SignupComponent implements OnInit {
   }
 
   public signup(e: any): any {
+    console.log('Signup data was received:');
+    console.log(e.target);
     this.fb.signup(e.target.email.value, e.target.password.value).pipe(first()).subscribe(() => {
       this.router.navigateByUrl('');
     }, (err) => {

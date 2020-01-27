@@ -25,7 +25,7 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/styles/styles.css"
+              "./src/styles.css"
             ],
             "scripts": []
           },
@@ -93,7 +93,7 @@
               "src/manifest.webmanifest"
             ],
             "styles": [
-              "src/styles/styles.css"
+              "./src/styles.css"
             ],
             "scripts": []
           }

@@ -12,6 +12,7 @@ import { NguiAutoCompleteModule } from '@ngui/auto-complete';
 import { FormsModule } from '@angular/forms';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { ErrorComponent } from './ui/error/error.component';
+import { LoginComponent } from './pages/login/login.component';
 /*
 import { HomeComponent } from './home/home.component';
 import { WeatherCardComponent } from './weather-card/weather-card.component';
@@ -25,6 +26,7 @@ import { SignupComponent } from './pages/signup/signup.component';
     AppComponent,
     SignupComponent,
     ErrorComponent,
+    LoginComponent,
     /*
     HomeComponent,
     WeatherCardComponent,
