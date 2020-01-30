@@ -41,6 +41,15 @@ body {
     }
 }
 
+@keyframes slideup {
+    from {
+        transform: translateY(50%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
 @keyframes slideright {
     from {
         transform: translateX(-50%)
