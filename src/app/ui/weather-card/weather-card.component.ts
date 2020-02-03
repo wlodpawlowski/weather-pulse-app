@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
 import { Router } from '@angular/router';
-//import { WeatherService } from '../../services/';
+import { WeatherService } from '../../services/weather/weather.service';
 import { UiService } from '../../services/ui/ui.service';
 import { Subscription } from 'rxjs';
 import { first } from 'rxjs/operators';

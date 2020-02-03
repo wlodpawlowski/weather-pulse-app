@@ -4,6 +4,8 @@
 
 export const environment = {
   production: false,
+  appID: '1:989017839342:web:eb141790e863a84a2a85ff',
+  gKey: '',
   config: {
     apiKey: "AIzaSyBzPE9GQq0uQvMHYVYQj8kS3KL0keBUkdI",
     authDomain: "weather-pulse-app.firebaseapp.com",
