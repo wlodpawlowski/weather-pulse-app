@@ -13,5 +13,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit() {
     this.cities = this.fb.getCities();
+    console.log('Fetched list of cities from the Firebase Cloud Server:');
+    console.log(this.cities);
   }
 }

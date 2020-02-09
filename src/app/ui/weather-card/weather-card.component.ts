@@ -42,7 +42,7 @@ export class WeatherCardComponent implements OnInit, OnDestroy {
         this.errorMessage = err.error.message;
         setTimeout(() => {
           this.errorMessage = '';
-        }, 3000);
+        }, 3000); 
       });
       this.weather.getForecast(city)
         .pipe(first())

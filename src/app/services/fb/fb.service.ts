@@ -10,6 +10,8 @@ export class FbService {
   constructor(public auth: AngularFireLiteAuth, public fs: AngularFireLiteFirestore) { }
 
   public isAuth(): any {
+    console.log('Function isAuthenticated from auth object:');
+    console.log(this.auth.isAuthenticated());
     return this.auth.isAuthenticated();
   }
 

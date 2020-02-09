@@ -15,6 +15,7 @@ import { ErrorComponent } from './ui/error/error.component';
 import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { WeatherCardComponent } from './ui/weather-card/weather-card.component';
+import { AddCardComponent } from './ui/add-card/add-card.component';
 /*
 import { HomeComponent } from './home/home.component';
 import { WeatherCardComponent } from './weather-card/weather-card.component';
@@ -31,6 +32,7 @@ import { SignupComponent } from './pages/signup/signup.component';
     LoginComponent,
     HomeComponent,
     WeatherCardComponent,
+    AddCardComponent,
     /*
     HomeComponent,
     WeatherCardComponent,

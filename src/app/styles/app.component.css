@@ -156,13 +156,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: transparent;
   align-self: center;
   margin-left: 2rem;
 }
 
 .profile__image {
   max-width: 4rem;
+  outline: 2px solid blue;
 }
 
 /*Header */

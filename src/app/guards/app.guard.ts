@@ -4,6 +4,7 @@ import { FbService } from '../services/fb/fb.service';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -14,6 +15,8 @@ export class AppGuard implements CanActivate {
     public canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | boolean {
       return this.fb.isAuth().pipe(map(
         auth => {
+          console.log('Fetched auth result from the Firebase Cloud Server:');
+          console.log(auth);
           if (auth) {
             return true;
           } else {
@@ -22,5 +25,8 @@ export class AppGuard implements CanActivate {
           }
         }
       ));
+    }
+
+    private newInformFucntion(informData: number, invocation: boolean, dataUsage: number): void {
     }
 }
