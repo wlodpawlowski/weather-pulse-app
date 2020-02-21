@@ -16,6 +16,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { HomeComponent } from './pages/home/home.component';
 import { WeatherCardComponent } from './ui/weather-card/weather-card.component';
 import { AddCardComponent } from './ui/add-card/add-card.component';
+import { AddComponent } from './pages/add/add.component';
 /*
 import { HomeComponent } from './home/home.component';
 import { WeatherCardComponent } from './weather-card/weather-card.component';
@@ -33,6 +34,7 @@ import { SignupComponent } from './pages/signup/signup.component';
     HomeComponent,
     WeatherCardComponent,
     AddCardComponent,
+    AddComponent,
     /*
     HomeComponent,
     WeatherCardComponent,
