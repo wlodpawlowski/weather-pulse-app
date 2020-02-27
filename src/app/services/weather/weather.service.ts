@@ -11,7 +11,7 @@ import { first, map } from 'rxjs/operators';
 export class WeatherService {
   private readonly baseUrl: string = 'https://api.openweathermap.org/data/2.5/weather?q=';
   private readonly forecastURL: string = 'https://api.openweathermap.org/data/2.5/forecast?q=';
-  private readonly appID: any = environment.appID;
+  private readonly appID: any = "34ec795c0d2eadfc124f1c7ebf1a2ee7";
 
   constructor(public http: HttpClient) {}
 

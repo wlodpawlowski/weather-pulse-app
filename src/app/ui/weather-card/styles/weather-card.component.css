@@ -10,6 +10,7 @@
   height: 30rem;
   cursor: pointer;
   background-color: #ffffff;
+  border-radius: 1.75rem;
   -webkit-animation: slideup 1s ease-in-out;
   -moz-animation: slideup 1s ease-in-out;
   -ms-animation: slideup 1s ease-in-out;

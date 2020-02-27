@@ -8,17 +8,18 @@
 .main-card {
   height: 87vh;
   width: 90vw;
-  background-color: #ffffff;
+  background-color: #fff;
+  border-radius: 1rem;
   display: flex;
   margin-top: -4rem;
 }
 
 .add-city-btn {
   padding: 0.75rem 1.5rem;
-  background-color: #003eff;
+  background-color: #003EFF;
   outline: none;
   border: none;
-  color: #ffffff;
+  color: white;
   border-radius: 2rem;
   font-size: 1rem;
 }
@@ -67,25 +68,25 @@
   border: none;
   box-shadow: 0 0 2rem 0.15rem rgba(0, 0, 255, 0.1);
   font-size: 1rem;
-  color: #131f69;
+  color: #131F69;
   text-transform: uppercase;
 }
-.search-city-inputplaceholder {
+.search-city-input::placeholder {
   font-size: 1rem;
-  color: #131f69;
+  color: #131F69;
   text-transform: uppercase;
   letter-spacing: 0.1rem;
 }
 
 .search-city-btn {
   cursor: pointer;
-  position: relative;
+  position: absolute;
   background-color: #31feae;
   height: 5rem;
   width: 5rem;
   border-radius: 50%;
   right: 0;
-  top: -35rem;
+  top: -0.35rem;
   outline: none;
   border: none;
   z-index: 5;
@@ -113,6 +114,7 @@
   bottom: 0;
   border-radius: 0 1rem 1rem 0;
   height: 100%;
+  width: 100%;
 }
 
 .fav-city-image-overlay {
@@ -121,6 +123,25 @@
   position: absolute;
   background: rgba(43, 36, 77, 0.5);
   border-radius: 0 1rem 1rem 0;
+}
+
+.fav-city-body, .fav-city-header {
+  position: relative;
+  color: white;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.fav-city-body-subwrapper {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-around;
+}
+
+.fav-city-hr {
+  width: 3rem;
 }
 
 .fav-city-title, .city-search-title {
@@ -184,11 +205,11 @@
   cursor: pointer;
   outline: none;
   margin-bottom: 2rem;
-  border: 2px solid #ffffff;
+  border: 2px solid white;
   border-radius: 3rem;
   padding: 1.25rem 2rem;
   background-color: transparent;
-  color: #ffffff;
+  color: white;
   font-weight: bold;
 }
 .fav-city-add-btn:hover {
@@ -205,12 +226,14 @@ app-weather-card {
   min-width: 28rem;
 }
 
+/* Media Query:   LT-XL */
 @media screen and (max-width: 1919px) {
   .add-city-btn {
     height: 80%;
     width: 75%;
   }
 }
+/* Media Query:   LT-MD */
 @media screen and (max-width: 959px) {
   app-weather-card {
     width: 90%;
