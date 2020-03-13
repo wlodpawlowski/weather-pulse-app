@@ -25,7 +25,7 @@ export class TwitterService {
           handle: tweet.user.screen_name
         }
       }))),
-      map((tweets: any) => tweets.slice(0, 4));
+      map((tweets: any) => tweets.slice(0, 4))
     )
   }
 }
