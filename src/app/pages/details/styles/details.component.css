@@ -126,4 +126,17 @@
   flex-flow: column;
 }
 
+.weather-state-container {
+  letter-spacing: 0.5rem;
+  font-size: 1.15rem;
+  text-transform: uppercase;
+  marging-top: 0.25rem;
+}
+
+.hum-wind__container {
+  display: flex;
+  align-items: center;
+  margin-left: -4rem;
+}
+
 /*# sourceMappingURL=details.component.css.map */

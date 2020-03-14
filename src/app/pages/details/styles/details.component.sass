@@ -113,3 +113,109 @@
     display: flex
     justify-content: center
     flex-flow: column
+
+.weather-state-container
+    letter-spacing: .5rem
+    font-size: 1.15rem
+    text-transform: uppercase
+    marging-top: .25rem
+
+.hum-wind__container
+    display: flex
+    align-items: center
+    margin-left: -4rem
+
+.hum-wind-separator
+    margin: 0 2rem
+    width: 2px
+    height: 2.5rem
+    background-color: #ffffff
+
+.hum__text, .wind__text
+    text-transform: uppercase
+    letter-spacing: 0.2rem
+    font-size: 0.8rem
+    margin-bottom: 1rem
+
+.hum__container, .wind__container
+    display: flex
+    flex-flow: column
+    justify-content: center
+    align-items: center
+
+.body-content__wrapper
+    display: grid
+    grid-template-columns: 1fr 1.5fr
+    grid-template-rows: 1fr
+    justify-items: center
+    justify-content: center
+    align-content: start
+    align-items: start
+    box-sizing: border-box
+    grid-column-gap: 1rem
+    width: 100%
+    padding: 2rem
+
+.forecast__container
+    display: flex
+    flex-flow: row
+    margin-left: 1rem
+    flex-wrap: wrap
+
+.twitter-feed__container
+    margin-top: 1rem
+    width: 100%
+
+.twitter-feed__body
+    display: flex
+    width: 100%
+    height: 100%
+    flex-flow: column
+
+.twitter-loader
+    border: 3px solid hsla(185, 100%, 62%, 0.2)
+    border-top-color: #3cefff
+    border-radius: 50%
+    width: 3em
+    height: 3em
+    animation: spin 1s linear infinite
+    justify-self: center
+    align-self: center
+    margin-top: 3rem
+
+@keyframes spin
+    to
+        transform: rotate(360deg)
+
+.twitter-no-tweets__text
+    margin-top: 3rem
+    text-align: center
+
+.twitter-feed__text
+    color: #0c1066
+    font-size: 1.25rem
+
+.twitter__icon
+    width: 1.5rem
+
+.twitter-feed-tag__text
+    font-size: .85rem
+    color: #5f84fb
+    letter-spacing: .1rem
+    text-transform: uppercase
+
+.twitter-feed__header
+    display: grid
+    grid-template-rows: 2rem
+    grid-template-columns: 0.5fr 1.5fr 1fr
+    align-items: center
+    justify-items: center
+
+.twitter-tweet__container
+    margin-top: 2rem
+
+.tweet-user__wrapper
+    display: flex
+    margin-bottom: .5rem
+
+    
