@@ -1,10 +1,10 @@
-import { Component, EventEmitter, Input, OnDestroy, OnInit, Output } from '@angular/core';
-import { Router } from '@angular/router';
-import { WeatherService } from '../../services/weather/weather.service';
-import { UiService } from '../../services/ui/ui.service';
-import { Subscription } from 'rxjs';
-import { first } from 'rxjs/operators';
-import { FbService } from '../../services/fb/fb.service';
+import {Component, EventEmitter, Input, OnDestroy, OnInit, Output} from '@angular/core';
+import {Router} from '@angular/router';
+import {WeatherService} from '../../services/weather/weather.service';
+import {UiService} from '../../services/ui/ui.service';
+import {Subscription} from 'rxjs';
+import {first} from 'rxjs/operators';
+import {FbService} from '../../services/fb/fb.service';
 
 @Component({
   selector: 'app-weather-card',
@@ -12,25 +12,7 @@ import { FbService } from '../../services/fb/fb.service';
   styleUrls: ['./styles/weather-card.component.css']
 })
 export class WeatherCardComponent implements OnInit, OnDestroy {
-  
-  constructor(public weather: WeatherService,
-              public router: Router,
-              public ui: UiService,
-              public fb: FbService) {}
 
-  public citiesWeather: Object;
-  public darkMode: boolean;
-  public sub1: Subscription;
-  public state: string;
-  public temp: number;
-  public maxTemp: number;
-  public minTemp: number;
-  public errorMessage: string;
-  public cityName: string;
-  public cityAdded: boolean = false;
-
-  @Input() addMode;
-  @Output() cityStored = new EventEmitter();
   @Input() set city(city: string) {
     this.cityName = city;
     this.weather.getWeather(city)
@@ -42,35 +24,50 @@ export class WeatherCardComponent implements OnInit, OnDestroy {
         this.errorMessage = err.error.message;
         setTimeout(() => {
           this.errorMessage = '';
-        }, 3000); 
+        }, 3000);
       });
-      this.weather.getForecast(city)
-        .pipe(first())
-        .subscribe((payload) => {
-          console.log('Payload from the Weather API:');
-          console.log(payload);
-          this.maxTemp = Math.round(payload[0].main.temp);
-          this.minTemp = Math.round(payload[0].main.temp);
-          for (const res of payload) {
-            console.log('Response from the Weather API:');
-            console.log(res);
-            if (new Date().toLocaleDateString('en-GB') === new Date(res.dt_txt).toLocaleDateString()) {
-              this.maxTemp = res.main.temp > this.maxTemp ? Math.round(res.main.temp) : this.maxTemp;
-              this.minTemp = res.min.temp < this.minTemp ? Math.round(res.main.temp) : this.minTemp;
-            }
+    this.weather.getForecast(city)
+      .pipe(first())
+      .subscribe((payload) => {
+        this.maxTemp = Math.round(payload[0].main.temp);
+        this.minTemp = Math.round(payload[0].main.temp);
+        for (const res of payload) {
+          if (new Date().toLocaleDateString('en-GB') === new Date(res.dt_txt).toLocaleDateString('en-GB')) {
+            this.maxTemp = res.main.temp > this.maxTemp ? Math.round(res.main.temp) : this.maxTemp;
+            this.minTemp = res.main.temp < this.minTemp ? Math.round(res.main.temp) : this.minTemp;
           }
-        }, (err) => {
-          this.errorMessage = err.error.message;
-          setTimeout(() => {
-            this.errorMessage = '';
-          }, 3000);
-        });
+        }
+      }, (err) => {
+        this.errorMessage = err.error.message;
+        setTimeout(() => {
+          this.errorMessage = '';
+        }, 3000);
+      });
+  }
+
+  @Input() addMode;
+  @Output() cityStored = new EventEmitter();
+  citesWeather: Object;
+  darkMode: boolean;
+  sub1: Subscription;
+  state: string;
+  temp: number;
+  maxTemp: number;
+  minTemp: number;
+  errorMessage: string;
+  cityName: string;
+  cityAdded = false;
+
+  constructor(public weather: WeatherService,
+              public router: Router,
+              public ui: UiService,
+              public fb: FbService) {
   }
 
   ngOnInit() {
     this.sub1 = this.ui.darkModeState.subscribe((isDark) => {
       this.darkMode = isDark;
-    })
+    });
   }
 
   ngOnDestroy() {
@@ -78,12 +75,17 @@ export class WeatherCardComponent implements OnInit, OnDestroy {
   }
 
   public openDetails(): void {
+    /*
+    console.log(`addMode: ${this.addMode}`);
     if (!this.addMode) {
-      this.router.navigateByUrl(`/details/${this.cityName}`);
+      this.router.navigateByUrl('/details/' + this.cityName);
     }
+    */
+   console.log(`cityName: ${this.cityName}`);
+   this.router.navigateByUrl('/details/' + this.cityName);
   }
 
-  public addCity(): void {
+  addCity() {
     this.fb.addCity(this.cityName).subscribe(() => {
       this.cityName = null;
       this.maxTemp = null;
@@ -92,9 +94,9 @@ export class WeatherCardComponent implements OnInit, OnDestroy {
       this.temp = null;
       this.cityAdded = true;
       this.cityStored.emit();
-      setTimeout(() => {
-        this.cityAdded = false;
-      }, 2000);
+      setTimeout(() => this.cityAdded = false, 2000);
     });
   }
+
+
 }

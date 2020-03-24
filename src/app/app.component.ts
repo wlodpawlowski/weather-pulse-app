@@ -11,10 +11,8 @@ import { Router } from '@angular/router';
 })
 export class AppComponent implements OnInit, OnDestroy {
   public showMenu: boolean = false;
-  public darkModeActive: boolean
-  `-;
+  public darkModeActive: boolean;
   public userEmail: string = '';
-  `-/
 
   constructor(public ui: UiService, public fb: FbService, public router: Router)  {}
 
