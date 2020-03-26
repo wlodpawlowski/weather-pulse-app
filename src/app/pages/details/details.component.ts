@@ -19,7 +19,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
   public hum: number;
   public wind: number;
   public today: string;
-  public daysForecast: Object;
+  public daysForecast: any = [];
   public cityIllustrationPath: string;
   public sub1: Subscription;
   public sub2: Subscription;
@@ -48,15 +48,13 @@ export class DetailsComponent implements OnInit, OnDestroy {
       this.wind = Math.round(Math.round(payload[0].wind.speed)); // Why we're using round() function twice ?
       const dates = {};
       for (const res of payload[1]) {
-        console.log(res.dt_txt);
         const date = new Date(res.dt_txt).toDateString().split(' ')[0];
-        console.log(`date: ${date}`); //I'll solve the problem with the daysForecast cards...
         if (dates[date]) {
           dates[date].counter += 1;
           dates[date].temp += res.main.temp;
         } else {
           dates[date] = {
-            state: res.weather[0].main,
+            state: res.weather[0].main, 
             temp: res.main.temp,
             counter: 1
           };
@@ -66,9 +64,10 @@ export class DetailsComponent implements OnInit, OnDestroy {
         dates[day].temp = Math.round(dates[day].temp / dates[day].counter);
       });
       delete dates[Object.keys(dates)[0]];
-      this.daysForecast = dates;
-      console.log('daysForecast:');
-      console.log(this.daysForecast);
+      Object.keys(dates).forEach((key) => {
+        dates[key].day = key;
+        this.daysForecast.push(dates[key]);
+      });
     }, (err) => {
       this.errorMessage = err.error.message;
       setTimeout(() => {
