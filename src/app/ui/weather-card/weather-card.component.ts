@@ -82,6 +82,8 @@ export class WeatherCardComponent implements OnInit, OnDestroy {
     }
     */
    console.log(`cityName: ${this.cityName}`);
+   if (this.cityName === 'Reykjavík')
+    this.cityName = 'Reykjavik';
    this.router.navigateByUrl('/details/' + this.cityName);
   }
 

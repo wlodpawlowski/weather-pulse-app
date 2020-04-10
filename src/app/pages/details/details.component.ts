@@ -21,6 +21,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
   public today: string;
   public daysForecast: any = [];
   public cityIllustrationPath: string;
+  public illustratedCapitals: string = 'abu dhabi, amsterdam, ankara, astana, athens, beijing, belgrade, berlin, bern, brasilia, bratislava, brussels, caracas, chisinau, copenhagen, doha, dublin, helsinki, jerusalem, kiev, kuala lumpur, lisbon, london, luxembourg, madrid, mexico city, minsk, monaco, moscow, new delhi, oslo, ottawa, paris, prague, pretoria, rabat, reykjavik, riga, rome, sarajevo, seoul, singapore, sofia, stockholm, tallinn, tirana, tokyo, tunis, vaduz, valletta, vienna, vilnius, warsaw, washington, d.c., welington, zagreb';
   public sub1: Subscription;
   public sub2: Subscription;
   public errorMessage: string;
@@ -39,7 +40,7 @@ export class DetailsComponent implements OnInit, OnDestroy {
     this.today = days[todayNumberInWeek];
     this.sub2 = this.activeRouter.paramMap.pipe(concatMap((route: any) => {
       this.city = route.params.city;
-      this.cityIllustrationPath = `../../../assets/details/${this.city.toLowerCase()}.png`;
+      this.cityIllustrationPath = this.illustratedCapitals.includes(this.city.toLowerCase()) ? `../../../assets/details/${this.city.toLowerCase()}.png` : `../../../assets/details/default_city.png`;
       return forkJoin(this.weather.getWeather(this.city), this.weather.getForecast(this.city)); // forkJoin() function - ??
     })).subscribe((payload) => {
       this.state = payload[0].weather[0].main;
