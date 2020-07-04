@@ -5,7 +5,6 @@
   align-items: center;
   flex-flow: column;
   transition: background 300ms linear;
-  background-image: linear-gradient(to top, #5ee7df 0%, #66a6ff 100%);
 }
 
 .root__container-dark {
@@ -266,6 +265,7 @@
 .logo__icon {
   height: 2rem;
   margin-left: 1rem;
+  outline: 1px solid green;
 }
 
 .logo__text {

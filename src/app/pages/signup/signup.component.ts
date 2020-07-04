@@ -3,6 +3,9 @@ import { FbService } from '../../services/fb/fb.service';
 import { Router } from '@angular/router';
 import { first } from 'rxjs/operators';
 import { NgForm } from '@angular/forms';
+import { faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus } from '@fortawesome/free-solid-svg-icons';
+import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-signup',
@@ -11,6 +14,9 @@ import { NgForm } from '@angular/forms';
 })
 export class SignupComponent implements OnInit {
   public errorMessage: string;
+  public faUserPlus: any = faUserPlus;
+  public faPlus: any = faPlus;
+  public faSignInAlt: any = faSignInAlt;
 
   constructor(public fb: FbService, public router: Router) {
   }

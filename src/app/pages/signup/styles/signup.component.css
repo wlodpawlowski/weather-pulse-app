@@ -65,34 +65,9 @@
   flex-flow: column;
   min-height: 100%;
   border-radius: 0 10px 10px 0;
-  background: url("https://source.unsplash.com/random/1200x900?mountain") no-repeat center center;
+  background: url("https://cdn.lowgif.com/full/14cd924518aed580-gif-avatar-11-gif-images-download.gif") no-repeat center center;
   background-size: cover;
   position: relative;
-}
-
-.signup-aside-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.15);
-  border-radius: 0 10px 10px 0;
-}
-
-.signup-aside-hr {
-  height: 0.5rem;
-  width: 8rem;
-  border: none;
-  outline: none;
-  background-color: #ffffff;
-  position: relative;
-  z-index: 5;
-  margin: 0 0 8rem 3rem;
-  -webkit-animation: slidedown 2s ease-in-out;
-  -moz-animation: slidedown 2s ease-in-out;
-  -ms-animation: slidedown 2s ease-in-out;
-  animation: slidedown 2s ease-in-out;
 }
 
 .signup-welcome-text {

@@ -18,6 +18,9 @@ import { WeatherCardComponent } from './ui/weather-card/weather-card.component';
 import { AddCardComponent } from './ui/add-card/add-card.component';
 import { AddComponent } from './pages/add/add.component';
 import { DetailsComponent } from './pages/details/details.component';
+
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+ 
 /*
 import { HomeComponent } from './home/home.component';
 import { WeatherCardComponent } from './weather-card/weather-card.component';
@@ -47,6 +50,7 @@ import { SignupComponent } from './pages/signup/signup.component';
   ],
   imports: [
     BrowserModule.withServerTransition({ appId: 'serverApp' }),
+    FontAwesomeModule,
     AppRoutingModule,
     HttpClientModule,
     NguiAutoCompleteModule,
