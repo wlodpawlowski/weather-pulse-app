@@ -5,6 +5,8 @@
   align-items: center;
   flex-flow: column;
   transition: background 300ms linear;
+  background-color: #85ffbd;
+  background-image: linear-gradient(45deg, #85ffbd 0%, #fffb7c 100%);
 }
 
 .root__container-dark {
@@ -54,7 +56,7 @@
   min-height: 100vh;
   width: 90%;
   max-width: 26rem;
-  background-color: white;
+  background-color: white !important;
   box-shadow: 0 0 2rem rgba(0, 0, 255, 0.1);
   display: grid;
   grid-template-columns: 1fr;
@@ -69,7 +71,7 @@
 }
 
 .slide-menu-active-dark {
-  background-color: #2B244D;
+  background-color: #2B244D !important;
 }
 
 .menu-header {
