@@ -7,13 +7,16 @@
 $btn-background: #00ff9b
 $btn-background-hover: linear-gradient(to right, #03a9f4, #00ff9b)
 
+$font-color: #0c1066
+
 .main__container
-    min-height: 90vh
+    min-height: 100vh
     width: 90vw
     display: flex
-    justify-content: center
+    justify-content: space-evenly
     align-items: center
     overflow: hidden
+    flex-direction: column
 
 .signup-card
     position: relative
@@ -25,11 +28,26 @@ $btn-background-hover: linear-gradient(to right, #03a9f4, #00ff9b)
     min-height: 80vh
     +animation_add(fadein 1s ease-in-out)
 
+.dev-footer
+    display: flex
+    flex-direction: flow
+    flex-wrap: nowrap
+    align-items: center
+    justify-content: space-evenly
+    color: $font-color
+    font-size: .8rem
+    font-style: bold
+    width: 100%
+    +animation_add(slideup 1.5s ease-in-out)
+
+    b
+        color: #ff3a82
+
 .signup-header
     position: absolute
     top: 5rem
     font-size: 2.5rem
-    color: #0c1066
+    color: $font-color
     letter-spacing: 0.2rem
     font-weight: bold
     +animation_add(slidedown 1.5s ease-in-out)
@@ -57,7 +75,7 @@ $btn-background-hover: linear-gradient(to right, #03a9f4, #00ff9b)
     flex-flow: column
     min-height: 100%
     border-radius: 0 10px 10px 0
-    background: url("https://cdn.lowgif.com/full/14cd924518aed580-gif-avatar-11-gif-images-download.gif") no-repeat center center
+    background: url("https://i.pinimg.com/originals/6c/67/8c/6c678c23d360432d5dad8c4aae4d48ca.gif") no-repeat center center
     background-size: cover
     position: relative
 
@@ -107,7 +125,7 @@ $btn-background-hover: linear-gradient(to right, #03a9f4, #00ff9b)
 
 .login-link-wrapper
     margin-top: 3rem
-    animation: slideup 1s ease-in-out
+    +animation_add(slideup 1s ease-in-out)
 
 .login-link
     text-transform: uppercase

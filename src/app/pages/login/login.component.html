@@ -2,8 +2,14 @@
     <div class="login-card">
   
       <main class="login-content">
-        <span class="login-header">Login</span>
+        <span class="login-header">
+          <fa-icon [icon]="faSignInAlt"></fa-icon>&nbsp;
+          Sign In
+        </span>
         <!-- login form -->
+        <!-- <i class="fas fa-sign-in-alt"></i> 
+            <i class="fas fa-user-plus"></i>
+        -->
   
         <form class="login-form" (ngSubmit)="login($event)" #authform="ngForm">
           <input ngModel type="email" autofocus placeholder="Email" name="email" class="login-input" required>
@@ -13,19 +19,26 @@
                  [disabled]="!authform.form.valid">
         </form>
         <div class="signup-link-wrapper">
-          <span class="signup-notice">Don't have an account?</span>
-          <a class="signup-link" routerLink="/signup">Sign up</a>
+          <span class="signup-notice">If you don't have an <b>account</b> yet</span>
+          <a class="signup-link" routerLink="/signup">
+            <fa-icon [icon]="faUserPlus"></fa-icon>&nbsp;Sign Up
+          </a>
         </div>
   
       </main>
   
       <!-- linking to signup -->
       <aside class="login-aside">
-        <div class="login-aside-overlay"></div>
-        <h1 class="login-welcome-text">Welcome Back!</h1>
-        <hr class="login-aside-hr">
       </aside>
     </div>
+
+    <!-- Developer's footer -->
+    <footer class="dev-footer">
+      <div class="dev-info">Developed with ❤️ by <b>Włodzimierz Pawłowski (Walter Paulson)</b></div>
+      <div class="date">2020 year</div>
+      <div class="copyright">© All rights reserved</div>
+    </footer>
+
   </div>
   
   

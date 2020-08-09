@@ -1,10 +1,11 @@
 .main__container {
-  min-height: 90vh;
+  min-height: 100vh;
   width: 90vw;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
   overflow: hidden;
+  flex-direction: column;
 }
 
 .signup-card {
@@ -19,6 +20,25 @@
   -moz-animation: fadein 1s ease-in-out;
   -ms-animation: fadein 1s ease-in-out;
   animation: fadein 1s ease-in-out;
+}
+
+.dev-footer {
+  display: flex;
+  flex-direction: flow;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #0c1066;
+  font-size: 0.8rem;
+  font-style: bold;
+  width: 100%;
+  -webkit-animation: slideup 1.5s ease-in-out;
+  -moz-animation: slideup 1.5s ease-in-out;
+  -ms-animation: slideup 1.5s ease-in-out;
+  animation: slideup 1.5s ease-in-out;
+}
+.dev-footer b {
+  color: #ff3a82;
 }
 
 .signup-header {
@@ -65,7 +85,7 @@
   flex-flow: column;
   min-height: 100%;
   border-radius: 0 10px 10px 0;
-  background: url("https://cdn.lowgif.com/full/14cd924518aed580-gif-avatar-11-gif-images-download.gif") no-repeat center center;
+  background: url("https://i.pinimg.com/originals/6c/67/8c/6c678c23d360432d5dad8c4aae4d48ca.gif") no-repeat center center;
   background-size: cover;
   position: relative;
 }
@@ -123,6 +143,9 @@
 
 .login-link-wrapper {
   margin-top: 3rem;
+  -webkit-animation: slideup 1s ease-in-out;
+  -moz-animation: slideup 1s ease-in-out;
+  -ms-animation: slideup 1s ease-in-out;
   animation: slideup 1s ease-in-out;
 }
 

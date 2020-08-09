@@ -1,7 +1,9 @@
-import {Component, OnInit} from '@angular/core';
-import {FbService} from '../../services/fb/fb.service';
-import {first, tap} from 'rxjs/operators';
-import {Router} from '@angular/router';
+import { Component, OnInit } from '@angular/core';
+import { FbService } from '../../services/fb/fb.service';
+import { first, tap } from 'rxjs/operators';
+import { Router } from '@angular/router';
+import { faSignInAlt } from '@fortawesome/free-solid-svg-icons';
+import { faUserPlus } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-login',
@@ -9,7 +11,9 @@ import {Router} from '@angular/router';
   styleUrls: ['./styles/login.component.css']
 })
 export class LoginComponent implements OnInit {
-  errorMessage = '';
+  public errorMessage: string = '';
+  public faSignInAlt: any = faSignInAlt;
+  public faUserPlus: any = faUserPlus;
   constructor(public fb: FbService, public router: Router) {
   }
 

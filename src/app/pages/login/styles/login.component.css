@@ -1,8 +1,9 @@
 .main__container {
-  min-height: 90vh;
-  min-width: 90vw;
+  min-height: 100vh;
+  width: 90vw;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   overflow: hidden;
 }
@@ -15,17 +16,45 @@
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   width: 85%;
   min-height: 80vh;
+  -webkit-animation: fadein 1s ease-in-out;
+  -moz-animation: fadein 1s ease-in-out;
+  -ms-animation: fadein 1s ease-in-out;
   animation: fadein 1s ease-in-out;
 }
 
+.dev-footer {
+  display: flex;
+  flex-direction: flow;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  color: #0c1066;
+  font-size: 0.8rem;
+  width: 100%;
+  -webkit-animation: slideup 1.5s ease-in-out;
+  -moz-animation: slideup 1.5s ease-in-out;
+  -ms-animation: slideup 1.5s ease-in-out;
+  animation: slideup 1.5s ease-in-out;
+}
+.dev-footer b {
+  color: #ff3a82;
+}
+
 .login-header {
+  position: absolute;
+  top: 5rem;
   font-size: 2.5rem;
-  display: block;
   margin-bottom: 2rem;
   color: #0c1066;
   letter-spacing: 0.2rem;
   font-weight: bold;
-  animation: fadein 1.75s ease-in-out;
+  -webkit-animation: slidedown 1.5s ease-in-out;
+  -moz-animation: slidedown 1.5s ease-in-out;
+  -ms-animation: slidedown 1.5s ease-in-out;
+  animation: slidedown 1.5s ease-in-out;
+}
+.login-header b {
+  color: #ff3a82;
 }
 
 .login-content {
@@ -34,6 +63,9 @@
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  -webkit-animation: fadein 1.5s ease-in-out;
+  -moz-animation: fadein 1.5s ease-in-out;
+  -ms-animation: fadein 1.5s ease-in-out;
   animation: fadein 1.5s ease-in-out;
   min-height: 100%;
 }
@@ -43,18 +75,20 @@
   flex-flow: column;
   width: 80%;
   align-items: center;
+  -webkit-animation: slidedown 2s ease-in-out;
+  -moz-animation: slidedown 2s ease-in-out;
+  -ms-animation: slidedown 2s ease-in-out;
   animation: slidedown 2s ease-in-out;
 }
 
 .login-aside {
-  animation: fadein 2.25s ease-in-out;
   flex: 3 3;
   display: flex;
   justify-content: flex-end;
   flex-flow: column;
   min-height: 100%;
   border-radius: 0 10px 10px 0;
-  background: url("https://source.unsplash.com/random/1200x900?mountain") no-repeat center center;
+  background: url("https://cdn.lowgif.com/full/14cd924518aed580-gif-avatar-11-gif-images-download.gif") no-repeat center center;
   background-size: cover;
   position: relative;
 }
@@ -78,7 +112,10 @@
   position: relative;
   z-index: 5;
   margin: 0 0 8rem 3rem;
-  animation: slideright 4s ease-out;
+  -webkit-animation: slideright 4s ease-in-out;
+  -moz-animation: slideright 4s ease-in-out;
+  -ms-animation: slideright 4s ease-in-out;
+  animation: slideright 4s ease-in-out;
 }
 
 .login-welcome-text {
@@ -88,7 +125,10 @@
   font-size: 2.75rem;
   position: relative;
   z-index: 5;
-  animation: slideright 2s ease-out;
+  -webkit-animation: slideright 2s ease-in-out;
+  -moz-animation: slideright 2s ease-in-out;
+  -ms-animation: slideright 2s ease-in-out;
+  animation: slideright 2s ease-in-out;
 }
 
 .login-input {
@@ -133,6 +173,9 @@
 
 .signup-link-wrapper {
   margin-top: 3rem;
+  -webkit-animation: slideup 1s ease-in-out;
+  -moz-animation: slideup 1s ease-in-out;
+  -ms-animation: slideup 1s ease-in-out;
   animation: slideup 1s ease-in-out;
 }
 
@@ -144,7 +187,7 @@
   margin-left: 1rem;
 }
 
-@media screen and (amx-width: 959px) {
+@media screen and (max-width: 959px) {
   .login-aside {
     display: none;
   }
